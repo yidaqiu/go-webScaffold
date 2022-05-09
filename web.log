@@ -1,0 +1,17 @@
+{"level":"DEBUG","ts":"2022-05-09T10:34:02.941+0800","msg":"log init success"}
+{"level":"DEBUG","ts":"2022-05-09T10:39:49.039+0800","msg":"log init success"}
+{"level":"DEBUG","ts":"2022-05-09T10:45:01.978+0800","msg":"log init success"}
+{"level":"DEBUG","ts":"2022-05-09T10:45:30.039+0800","msg":"log init success"}
+{"level":"DEBUG","ts":"2022-05-09T10:46:01.804+0800","msg":"log init success"}
+{"level":"DEBUG","ts":"2022-05-09T10:46:22.804+0800","msg":"log init success"}
+{"level":"DEBUG","ts":"2022-05-09T12:01:13.005+0800","msg":"log init success"}
+{"level":"DEBUG","ts":"2022-05-09T12:01:55.156+0800","msg":"log init success"}
+{"level":"ERROR","ts":"2022-05-09T12:01:55.182+0800","msg":"listen: %s\nlisten tcp: lookup tcp/%!s(int=8081): getaddrinfow: The specified class was not found."}
+{"level":"INFO","ts":"2022-05-09T12:03:12.660+0800","msg":"Shutdown Server ..."}
+{"level":"INFO","ts":"2022-05-09T12:03:12.660+0800","msg":"Server exiting"}
+{"level":"DEBUG","ts":"2022-05-09T12:03:17.393+0800","msg":"log init success"}
+{"level":"INFO","ts":"2022-05-09T12:03:22.584+0800","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36","errors":"","cost":0.0000302}
+{"level":"INFO","ts":"2022-05-09T12:03:22.654+0800","msg":"/favicon.ico","status":404,"method":"GET","path":"/favicon.ico","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","ts":"2022-05-09T12:03:25.854+0800","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36","errors":"","cost":0}
+{"level":"INFO","ts":"2022-05-09T12:03:34.329+0800","msg":"Shutdown Server ..."}
+{"level":"INFO","ts":"2022-05-09T12:03:34.330+0800","msg":"Server exiting"}

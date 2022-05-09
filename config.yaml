@@ -1,0 +1,24 @@
+app:
+  name: "web Scaffold"
+  mode: "dev"
+  port: 8081
+log:
+  level: "debug"
+  filename: "web.log"
+  max_size: 200
+  max_age: 30
+  max_backups: 7
+mysql:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: ""
+  dbname: "test"
+  max_conns: 200
+  max_idleconns: 10
+  max_lifetime: 10
+redis:
+  host: "127.0.0.1"
+  port: 6379
+  db: 0
+  pool_size: 20
