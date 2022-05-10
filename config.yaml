@@ -1,7 +1,6 @@
-app:
-  name: "web Scaffold"
-  mode: "dev"
-  port: 8081
+name: "web Scaffold"
+mode: "dev"
+port: 8081
 log:
   level: "debug"
   filename: "web.log"
@@ -11,7 +10,7 @@ log:
 mysql:
   host: "127.0.0.1"
   port: 3306
-  user: "root"
+  username: "root"
   password: ""
   dbname: "test"
   max_conns: 200

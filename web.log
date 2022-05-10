@@ -15,3 +15,6 @@
 {"level":"INFO","ts":"2022-05-09T12:03:25.854+0800","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36","errors":"","cost":0}
 {"level":"INFO","ts":"2022-05-09T12:03:34.329+0800","msg":"Shutdown Server ..."}
 {"level":"INFO","ts":"2022-05-09T12:03:34.330+0800","msg":"Server exiting"}
+{"level":"DEBUG","ts":"2022-05-10T11:42:26.321+0800","msg":"log init success"}
+{"level":"DEBUG","ts":"2022-05-10T11:42:47.708+0800","msg":"log init success"}
+{"level":"ERROR","ts":"2022-05-10T11:42:47.730+0800","msg":"listen: %s\nlisten tcp: lookup tcp/%!d(string=8081): getaddrinfow: The specified class was not found."}

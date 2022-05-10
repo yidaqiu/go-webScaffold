@@ -1,6 +1,7 @@
 package logger
 
 import (
+	"ginframe/webScaffold/settings"
 	"net"
 	"net/http"
 	"net/http/httputil"
@@ -11,7 +12,6 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/natefinch/lumberjack"
-	"github.com/spf13/viper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
@@ -19,18 +19,18 @@ import (
 //var Logger *zap.Logger
 //var SuggarLogger *zap.SugaredLogger
 
-func Init() (err error) {
-	err = InitLogger()
+func Init(loggerConfig *settings.LogConfig) (err error) {
+	err = InitLogger(loggerConfig)
 	defer zap.L().Sync()
 	return
 }
 
-func InitLogger() (err error) {
-	writeSyncer := getLogWriter()
+func InitLogger(loggerConfig *settings.LogConfig) (err error) {
+	writeSyncer := getLogWriter(loggerConfig)
 	encoder := getEncoder()
 
 	var l = new(zapcore.Level)
-	if err = l.UnmarshalText([]byte(viper.GetString("log.level"))); err != nil {
+	if err = l.UnmarshalText([]byte(loggerConfig.Level)); err != nil {
 		return
 	}
 	core := zapcore.NewCore(encoder, writeSyncer, l)
@@ -54,13 +54,13 @@ func getEncoder() zapcore.Encoder {
 	return zapcore.NewJSONEncoder(encoderConfig)
 }
 
-func getLogWriter() zapcore.WriteSyncer {
+func getLogWriter(loggerConfig *settings.LogConfig) zapcore.WriteSyncer {
 	lumberjackLogger := &lumberjack.Logger{
-		Filename:   viper.GetString("log.filename"), // 日志文件的位置
-		MaxSize:    viper.GetInt("log.max_size"),    // 备份文件最大多大（以MB为单位）
-		MaxBackups: viper.GetInt("log.backups"),     // 最大备份数量
-		MaxAge:     viper.GetInt("log.max_age"),     // 最大备份天数
-		Compress:   false,                           // 是否压缩
+		Filename:   loggerConfig.Filename,   // 日志文件的位置
+		MaxSize:    loggerConfig.MaxSize,    // 备份文件最大多大（以MB为单位）
+		MaxBackups: loggerConfig.MaxBackups, // 最大备份数量
+		MaxAge:     loggerConfig.MaxAge,     // 最大备份天数
+		Compress:   false,                   // 是否压缩
 	}
 	return zapcore.AddSync(lumberjackLogger)
 }
