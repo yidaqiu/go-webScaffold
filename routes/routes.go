@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"ginframe/webScaffold/logger"
 	"net/http"
+	"webScaffold/logger"
 
 	"go.uber.org/zap"
 

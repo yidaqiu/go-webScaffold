@@ -1,7 +1,6 @@
 package logger
 
 import (
-	"ginframe/webScaffold/settings"
 	"net"
 	"net/http"
 	"net/http/httputil"
@@ -9,6 +8,7 @@ import (
 	"runtime/debug"
 	"strings"
 	"time"
+	"webScaffold/settings"
 
 	"github.com/gin-gonic/gin"
 	"github.com/natefinch/lumberjack"

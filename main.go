@@ -3,16 +3,16 @@ package main
 import (
 	"context"
 	"fmt"
-	"ginframe/webScaffold/dao/mysql"
-	"ginframe/webScaffold/dao/redis"
-	"ginframe/webScaffold/logger"
-	"ginframe/webScaffold/routes"
-	"ginframe/webScaffold/settings"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+	"webScaffold/dao/mysql"
+	"webScaffold/dao/redis"
+	"webScaffold/logger"
+	"webScaffold/routes"
+	"webScaffold/settings"
 
 	"go.uber.org/zap"
 )

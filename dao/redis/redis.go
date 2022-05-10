@@ -3,7 +3,7 @@ package redis
 import (
 	"context"
 	"fmt"
-	"ginframe/webScaffold/settings"
+	"webScaffold/settings"
 
 	"github.com/go-redis/redis/v8"
 )

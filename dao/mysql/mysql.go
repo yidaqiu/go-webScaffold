@@ -3,8 +3,8 @@ package mysql
 import (
 	"database/sql"
 	"fmt"
-	"ginframe/webScaffold/settings"
 	"time"
+	"webScaffold/settings"
 
 	_ "github.com/go-sql-driver/mysql"
 )
