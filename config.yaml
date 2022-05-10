@@ -1,6 +1,8 @@
 name: "web Scaffold"
 mode: "dev"
 port: 8081
+start_time: "2022-05-10"
+marchine_id: 1
 log:
   level: "debug"
   filename: "web.log"

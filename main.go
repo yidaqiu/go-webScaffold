@@ -11,6 +11,7 @@ import (
 	"webScaffold/dao/mysql"
 	"webScaffold/dao/redis"
 	"webScaffold/logger"
+	"webScaffold/pkg/snowflake"
 	"webScaffold/routes"
 	"webScaffold/settings"
 
@@ -44,6 +45,13 @@ func main() {
 	//redis.Close()
 	// 注册路由
 	r := routes.Setup()
+
+	// 雪花算法
+	if err := snowflake.Init(settings.Conf.StartTime, settings.Conf.MachineID); err != nil {
+		fmt.Printf("init snowflake failed, err:%v\n", err)
+		return
+	}
+	//println(snowflake.GenID())
 
 	// 启动服务（优雅关机）
 	srv := &http.Server{

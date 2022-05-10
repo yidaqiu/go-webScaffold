@@ -22,3 +22,7 @@
 {"level":"ERROR","ts":"2022-05-10T16:50:42.698+0800","msg":"listen: %s\nlisten tcp: lookup tcp/%!d(string=8081): getaddrinfow: The specified class was not found."}
 {"level":"INFO","ts":"2022-05-10T16:50:52.932+0800","msg":"Shutdown Server ..."}
 {"level":"INFO","ts":"2022-05-10T16:50:52.932+0800","msg":"Server exiting"}
+{"level":"DEBUG","ts":"2022-05-10T17:35:46.302+0800","msg":"log init success"}
+{"level":"ERROR","ts":"2022-05-10T17:35:46.316+0800","msg":"listen: %s\nlisten tcp: lookup tcp/%!d(string=8081): getaddrinfow: The specified class was not found."}
+{"level":"INFO","ts":"2022-05-10T17:35:48.364+0800","msg":"Shutdown Server ..."}
+{"level":"INFO","ts":"2022-05-10T17:35:48.364+0800","msg":"Server exiting"}
