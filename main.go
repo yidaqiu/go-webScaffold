@@ -29,20 +29,20 @@ func main() {
 		fmt.Printf("log settings failed, err:%v\n", err)
 		return
 	}
-	//defer zap.L().Sync()
+	defer zap.L().Sync()
 	zap.L().Debug("log init success")
 	// 初始化mysql 连接
 	if err := mysql.Init(settings.Conf.MysqlConfig); err != nil {
 		fmt.Printf("mysql settings failed, err:%v\n", err)
 		return
 	}
-	//defer mysql.Close()
+	defer mysql.Close()
 	// 初始化redis 连接
 	if err := redis.Init(settings.Conf.RedisConfig); err != nil {
 		fmt.Printf("redis settings failed, err:%v\n", err)
 		return
 	}
-	//redis.Close()
+	redis.Close()
 	// 注册路由
 	r := routes.Setup()
 

@@ -19,7 +19,7 @@ func Init(redisConfig *settings.RedisConfig) (err error) {
 	fmt.Println("connect redis success...")
 
 	// 最后记得关闭连接，释放资源
-	defer rdb.Close()
+	//defer rdb.Close()
 
 	return
 }

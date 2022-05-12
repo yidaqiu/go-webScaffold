@@ -21,7 +21,7 @@ import (
 
 func Init(loggerConfig *settings.LogConfig) (err error) {
 	err = InitLogger(loggerConfig)
-	defer zap.L().Sync()
+	//defer zap.L().Sync()
 	return
 }
 

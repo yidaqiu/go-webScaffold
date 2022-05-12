@@ -17,7 +17,7 @@ func Init(mysqlConfig *settings.MysqlConfig) (err error) {
 		return
 	}
 	// 关闭数据库连接资源
-	defer db.Close()
+	//defer db.Close()
 
 	fmt.Println("数据库链接成功！")
 	return
